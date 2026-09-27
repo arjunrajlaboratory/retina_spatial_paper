@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+*.log
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# System files
+.DS_Store
+.Rhistory
+.idea/
+.vscode/
+
+# Local settings
+_local_paths.py
+
+# Data and outputs
+data/
+data_raw*/
+data_processed/
+data_plot/
+panels/
+outputs/
+audit_outputs/
+*.csv
+*.tsv
+*.parquet
+*.h5ad
+*.h5
+*.hdf5
+*.tif
+*.tiff
+*.png
+*.pdf
+*.npy
+*.npz
+*.pt
+*.pth
+*.zip
+*.tar
+*.gz
