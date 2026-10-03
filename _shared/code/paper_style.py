@@ -35,6 +35,8 @@ def set_style():
         "mathtext.rm": FONT,
         "mathtext.it": f"{FONT}:italic",
         "mathtext.bf": f"{FONT}:bold",
+        # Italic slot for gene names, since mathit forces digits upright
+        "mathtext.sf": f"{FONT}:italic",
     })
 
 
@@ -45,8 +47,8 @@ CONDITION_COLORS = {
     "LCA5_P21": "#E69F00", "LCA5_P30": "#D55E00", "LCA5_P64": "#8E2430",
 }
 
-# Render the genotype as italic LCA5 gt/gt
-GENOTYPE = r"$\mathit{LCA5}^{gt/gt}$"
+# Render the genotype as italic Lca5 gt/gt
+GENOTYPE = r"$\mathsf{Lca5}^{gt/gt}$"
 
 
 # Convert a postnatal age token into days

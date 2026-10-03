@@ -146,21 +146,21 @@ for axis, (age, stats) in zip(axes, panels):
     for spine_name in ("top", "right"):
         axis.spines[spine_name].set_visible(False)
     # Add the direction legend matching Figure 3a
-    lca_label = "$\\mathit{LCA5}^{gt/gt}$"
+    lca_label = "$\\mathsf{Lca5}^{gt/gt}$"
     legend_handles = [plt.Line2D([0], [0], marker="o", ls="", ms=6, mfc=up_color, mec="none", label=f"up in {lca_label}"),
                       plt.Line2D([0], [0], marker="o", ls="", ms=6, mfc=down_color, mec="none", label=f"down in {lca_label}")]
     axis.legend(handles=legend_handles, loc="upper left", fontsize=8, frameon=False, handletextpad=0.4, labelspacing=0.3)
     # Add the two color title
     title_segments = [("Wild-type", paper_style.CONDITION_SIMPLE_WT), (" vs ", "#666666"),
-                      (f"$\\mathit{{LCA5}}^{{gt/gt}}$ {age}", paper_style.CONDITION_SIMPLE_LCA5)]
+                      (f"$\\mathsf{{Lca5}}^{{gt/gt}}$ {age}", paper_style.CONDITION_SIMPLE_LCA5)]
     title_boxes = [TextArea(text, textprops=dict(color=color, fontsize=19, fontweight="bold")) for text, color in title_segments]
     axis.add_artist(AnchoredOffsetbox(loc="lower center", child=HPacker(children=title_boxes, align="baseline", pad=0, sep=0),
                     pad=0, borderpad=0, frameon=False, bbox_to_anchor=(0.5, 1.0), bbox_transform=axis.transAxes))
     axis.text(0.5, 1.09, "Total retina", transform=axis.transAxes, ha="center", va="bottom",
               fontsize=20, fontweight="bold", color="black")
     axis.tick_params(labelsize=11)
-axes[0].set_ylabel(r"Log2 FC ($\mathit{LCA5}^{gt/gt}$ rep 2 / mean wild-type)", fontsize=13, fontweight="bold")
-figure.supxlabel(r"Log2 FC ($\mathit{LCA5}^{gt/gt}$ rep 1 / mean wild-type)",
+axes[0].set_ylabel(r"Log2 FC ($\mathsf{Lca5}^{gt/gt}$ rep 2 / mean wild-type)", fontsize=13, fontweight="bold")
+figure.supxlabel(r"Log2 FC ($\mathsf{Lca5}^{gt/gt}$ rep 1 / mean wild-type)",
                  fontsize=13, fontweight="bold")
 
 ## Save the panel

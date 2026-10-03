@@ -95,7 +95,7 @@ for tick_label, condition in zip(axes.get_yticklabels(), conditions):
     tick_label.set_color(paper_style.CONDITION_COLORS[condition])
 axes.set_ylim(-0.7, len(conditions) - 0.3)
 axes.set_xlim(0, x_hi)
-axes.set_xlabel(r"$\mathit{Gfap}$+$\mathit{Serpina3n}$ transcript density, ONL+INL (transcripts/µm²)", fontsize=10, fontweight="bold")
+axes.set_xlabel(r"$\mathsf{Gfap}$+$\mathsf{Serpina3n}$ transcript density, ONL+INL (transcripts/µm²)", fontsize=10, fontweight="bold")
 axes.legend(handles=[Line2D([0], [0], marker="o", ls="", mfc="white", mec="#555", ms=8, label="rep1 median"),
                      Line2D([0], [0], marker="o", ls="", mfc="#555", mec="#555", ms=8, label="rep2 median")],
             fontsize=9, frameon=False, loc="lower right")

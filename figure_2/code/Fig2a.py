@@ -82,7 +82,7 @@ for column_index, cond in enumerate(conditions):
 
     # Add the title above the panel with the genotype spelled out
     genotype_code, age = cond.split("_", 1)
-    genotype = r"$\mathit{LCA5}$ mutant" if genotype_code == "LCA5" else "Wild-type"
+    genotype = r"$\mathsf{Lca5}$ mutant" if genotype_code == "LCA5" else "Wild-type"
     axes.set_title(f"{genotype} {paper_style.age_label(age)}", color=paper_style.condition_color_simple(cond), fontsize=16, weight="bold", pad=14)
 
     # Add the cell count for each retina in the top left corner

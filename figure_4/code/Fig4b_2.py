@@ -240,7 +240,7 @@ def load_mg_tx(sample):
 def ital_label(text):
     out = text
     for g in ("Edn2", "Socs3", "Fgf2", "Stat3", "Cebpd", "Gadd45b", "Nr4a1", "Stat1"):
-        out = out.replace(g, rf"$\mathit{{{g}}}$")
+        out = out.replace(g, rf"$\mathsf{{{g}}}$")
     return out
 
 

@@ -172,21 +172,21 @@ if texts:
 axes.set_xlim(-axis_limit, axis_limit)
 axes.set_ylim(-axis_limit, axis_limit)
 axes.set_box_aspect(1.0)
-axes.set_xlabel(r"Log2 FC ($\mathit{LCA5}^{gt/gt}$ rep 1 / mean wild-type)", fontsize=13, fontweight="bold")
-axes.set_ylabel(r"Log2 FC ($\mathit{LCA5}^{gt/gt}$ rep 2 / mean wild-type)", fontsize=13, fontweight="bold")
+axes.set_xlabel(r"Log2 FC ($\mathsf{Lca5}^{gt/gt}$ rep 1 / mean wild-type)", fontsize=13, fontweight="bold")
+axes.set_ylabel(r"Log2 FC ($\mathsf{Lca5}^{gt/gt}$ rep 2 / mean wild-type)", fontsize=13, fontweight="bold")
 axes.tick_params(labelsize=11)
 for spine_name in ("top", "right"):
     axes.spines[spine_name].set_visible(False)
 
 ## Add the direction legend
-lca_label = "$\\mathit{LCA5}^{gt/gt}$"
+lca_label = "$\\mathsf{Lca5}^{gt/gt}$"
 legend_handles = [plt.Line2D([0], [0], marker="o", ls="", ms=8, mfc=up_color, mec="none", label=f"up in {lca_label}"),
                   plt.Line2D([0], [0], marker="o", ls="", ms=8, mfc=down_color, mec="none", label=f"down in {lca_label}")]
 axes.legend(handles=legend_handles, loc="upper left", fontsize=10, frameon=False)
 
 ## Add the two tone title
 title_segments = [("Wild-type 21d", paper_style.CONDITION_SIMPLE_WT), ("  vs  ", "#666666"),
-                  ("$\\mathit{LCA5}^{gt/gt}$ 21d", paper_style.CONDITION_SIMPLE_LCA5)]
+                  ("$\\mathsf{Lca5}^{gt/gt}$ 21d", paper_style.CONDITION_SIMPLE_LCA5)]
 title_boxes = [TextArea(text, textprops=dict(color=color, fontsize=17, fontweight="bold")) for text, color in title_segments]
 axes.add_artist(AnchoredOffsetbox(loc="lower center", child=HPacker(children=title_boxes, align="baseline", pad=0, sep=0),
                 pad=0, borderpad=0, frameon=False, bbox_to_anchor=(0.5, 1.0), bbox_transform=axes.transAxes))

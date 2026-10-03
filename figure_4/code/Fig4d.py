@@ -167,7 +167,7 @@ def label_scores(tp, x_lead0, x_lead1, x_text, ha):
             ys[i] = ys[i - 1] - gap
     for g, y in zip(ordered, ys):
         axes.plot([x_lead0, x_lead1], [tp_prog[tp][g], y], color=score_color, lw=0.6, zorder=6)
-        axes.text(x_text, y, rf"$\mathit{{{g}}}$", va="center", ha=ha, fontsize=9.5, fontweight="bold", color=score_color, zorder=7)
+        axes.text(x_text, y, rf"$\mathsf{{{g}}}$", va="center", ha=ha, fontsize=9.5, fontweight="bold", color=score_color, zorder=7)
 
 
 label_scores("LCA5_P21", 0.16, 0.55, 0.62, "left")

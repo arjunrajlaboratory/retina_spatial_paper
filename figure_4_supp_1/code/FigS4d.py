@@ -65,7 +65,7 @@ for gene in program:
     axes.plot([x_of[gene] - 0.24, x_of[gene] + 0.24], [data.loc[data.held_gene == gene, "correlation"].mean()] * 2,
               color="#444", lw=2, zorder=2)
 axes.set_xticks(list(x_of.values()))
-axes.set_xticklabels([rf"$\mathit{{{g}}}$" for g in program], fontsize=11)
+axes.set_xticklabels([rf"$\mathsf{{{g}}}$" for g in program], fontsize=11)
 axes.set_xlabel("Gene omitted from the score", fontsize=10.5, fontweight="bold")
 axes.set_ylabel("Spatial profile correlation\n(3-gene vs full 4-gene)", fontsize=10.5, fontweight="bold")
 axes.set_ylim(0.0, 1.02)

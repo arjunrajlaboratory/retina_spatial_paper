@@ -33,6 +33,7 @@ mpl.rcParams.update({
     "mathtext.rm": "Arial",
     "mathtext.it": "Arial:italic",
     "mathtext.bf": "Arial:bold",
+    "mathtext.sf": "Arial:italic",
     "mathtext.default": "it",
     "savefig.dpi": 220,
     "figure.dpi": 130,
@@ -46,10 +47,6 @@ export_root = SEGMENTATION_EXPORT_ROOT
 
 ## Define samples layers and zoom regions
 condition_order = ["WT_P21", "WT_P64", "LCA5_P21", "LCA5_P30", "LCA5_P64"]
-# Plain Arial condition labels for the bar panel
-condition_label_plain = {"WT_P21": "Wild-type 21d", "WT_P64": "Wild-type 64d",
-                         "LCA5_P21": "LCA5 21d", "LCA5_P30": "LCA5 30d",
-                         "LCA5_P64": "LCA5 64d"}
 # Define the 5 representative reps and their zoom centers
 display_reps = [
     ("WT_P21",   "WT_P21_rep2"),
@@ -163,7 +160,7 @@ def render_coverage_panel(axes, coverage, col="frac_assigned", ylabel="DAPI area
 
     axes.set_xticks(x_positions)
     if xlabels:
-        axes.set_xticklabels([condition_label_plain[c] for c in condition_order], rotation=40,
+        axes.set_xticklabels([paper_style.condition_label(c) for c in condition_order], rotation=40,
                              ha="right", fontsize=13, fontweight="bold")
         for tick_label, condition in zip(axes.get_xticklabels(), condition_order):
             tick_label.set_color(paper_style.condition_color_simple(condition))
